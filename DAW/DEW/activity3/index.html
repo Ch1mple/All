@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Activity 3: Forms &amp; click event</title>
+  </head>
+  <body>
+    <h1>Activity 3: Forms &amp; click event</h1>
+    <p>Add a form with two fields ("Rows" and "Columns") and a button ("Generate Table"). When the button is clicked it have to:</p>
+      <ol>
+        <li>remove a table#generated if exists </li>
+        <li>Add a table with as many rows and conlumns both Rows and Columns fields indicate</li>
+        <li>Each table cell must contain a text like: "Row: X, Col: Y"</li>
+      </ol>
+
+	
+	
+	
+	
+	<form method="" action="">
+	
+	<input type="text" id="filas" name="filas" placeholder="Filas:" /><br>
+	<input type="text" id="columnas" name="columnas" placeholder="Columnas:" />
+	  
+	  
+	<input type="button" onclick="crearFila();" value="Crear" />
+	<input type="button" onclick="eliminarFila();" value="Eliminar" />
+	</form>
+	
+	<div id="here_table"></div>
+
+	
+	
+	
+	
+	
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js"  crossorigin="anonymous"></script>
+	<script>
+	
+
+		function crearFila(index) {
+		
+			var content = '<table style="width:35%">'
+			for(i=0; i<3; i++){
+				content += '<tr><td>' + 'result ' +  i + '</td><td>' + 'result ' +  i + '</td></tr>';
+			}
+			content += "</table>"
+
+			$('#here_table').append(content);
+					
+		}
+		
+		function eliminarFila(index) {
+			$("#here_table").remove();
+		}
+	</script>
+	
+	
+	<!-- https://es.stackoverflow.com/questions/9141/eliminar-fila-de-tabla-html-con-jquery-o-js -->
+	
+  </body>
+</html>
